@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>831</width>
+    <height>569</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTextBrowser" name="Setup_Tab1_RequirementsTE">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Program setup information.  (Shift-F1 and Click for more details.)</string>
+     </property>
+     <property name="statusTip">
+      <string>Program setup information.  (Shift-F1 and Click for more details.)</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Donut Tool Setup&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The program is set up by the user entering in both Project data and Species data in the following panels.&lt;/p&gt;&lt;p&gt;A Project File is a file which contains information such as directory and database name for the project.&lt;/p&gt;&lt;p&gt;The Donut Tool saves its data as CSV files on disk. These files are located in the project directory specified by the user. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:14pt; font-weight:600;&quot;&gt;Atlantis Availability Calculator&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;This tool allows the user to generate the Food Availability Fractions used in the Atlantis input biological parameter files (i.e., with extension .prm).  After generating the values, the user may then insert them into the appropriate .prm file, replacing any existing Availability values.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:12pt; font-weight:600;&quot;&gt;Suggested Workflow:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;1. Create Project&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; Projects are setup in: &lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt; font-style:italic;&quot;&gt;Tab 2 - Project Setup&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; They define where relevant meta-data and working files are saved&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; Make sure to save your Project&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;2. Select Species File and Choose Species&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; Species are setup in: &lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt; font-style:italic;&quot;&gt;Tab 3a - Initialize Species&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; The user selects and loads an Atlantis Species Codes file&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; The user selects which species are predators and prey-only&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; The user must save their selections prior to moving on to the next tab&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;3. Set Diet Composition Values&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; Diet data are entered in: &lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt; font-style:italic;&quot;&gt;Tab 3b - Set Diet Composition&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; The user enters values &amp;lt; 1 for each prey's diet contribution for the particular predator&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; All prey contributions per predator must sum to 1&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; There are graphics controls that assist the user in completing this table:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;   -  Click and set spinbox:  allows the user to set table values by clicking in a cell&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;   -  Equalize checkbox:  allows the user to give predators equal diet composition values for all prey&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; After inputting and saving data, the user may graphically view the data by clicking the View button&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;4. Calculate Availability Values&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; Calculations are run in: &lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt; font-style:italic;&quot;&gt;Tab 4 - Calculate Availability&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; The user generates the Availability values by clicking the Calculate button&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:9pt; color:#4d5156; background-color:#ffffff;&quot;&gt;   •&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; font-size:11pt;&quot;&gt; The user may then click the Extract button to insert the Availability values into a .prm file&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Noto Sans'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

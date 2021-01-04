@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>forms/Main/Main_NavigatorTreeWidget.ui</file>
+        <file>forms/Setup/Setup_Tab01.ui</file>
+        <file>forms/Setup/Setup_Tab02.ui</file>
+        <file>forms/Setup/Setup_Tab03.ui</file>
+        <file>forms/Setup/Setup_Tab04.ui</file>
+        <file>icons/whatsthis.png</file>
+        <file>icons/scrgrb.png</file>
+        <file>icons/NOAA.png</file>
+        <file>icons/NOAAsmall.png</file>
+        <file>forms/Main/PreferencesDlg.ui</file>
+        <file>icons/splashWithNOAAv2.jpg</file>
+        <file>icons/atlantis1.jpg</file>
+        <file>icons/atlantis2.jpg</file>
+        <file>icons/atlantis2v2.png</file>
+    </qresource>
+</RCC>

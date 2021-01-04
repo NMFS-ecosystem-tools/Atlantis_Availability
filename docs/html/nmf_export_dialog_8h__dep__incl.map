@@ -1,0 +1,5 @@
+<map id="Atlantis_Avail_GuiSetup/nmfExportDialog.h" name="Atlantis_Avail_GuiSetup/nmfExportDialog.h">
+<area shape="rect" id="node1" title="GUI definition for the Availability Data Export Dialog." alt="" coords="35,5,212,47"/>
+<area shape="rect" id="node2" href="$nmf_setup_tab04_8h.html" title="GUI definition for the Availability Calculator Run GUI." alt="" coords="35,95,212,136"/>
+<area shape="rect" id="node3" href="$nmf_main_window_8h.html" title="GUI definition for the main nmfMainWindow Availability Tool Application class." alt="" coords="5,184,241,211"/>
+</map>

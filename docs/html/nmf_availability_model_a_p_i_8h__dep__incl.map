@@ -1,0 +1,5 @@
+<map id="Atlantis_Avail_ModelAPI/nmfAvailabilityModelAPI.h" name="Atlantis_Avail_ModelAPI/nmfAvailabilityModelAPI.h">
+<area shape="rect" id="node1" title="Contains all of the business (i.e., non&#45;GUI) logic for the Availability value calculations." alt="" coords="24,5,223,47"/>
+<area shape="rect" id="node2" href="$nmf_setup_tab04_8h.html" title="GUI definition for the Availability Calculator Run GUI." alt="" coords="35,95,212,136"/>
+<area shape="rect" id="node3" href="$nmf_main_window_8h.html" title="GUI definition for the main nmfMainWindow Availability Tool Application class." alt="" coords="5,184,241,211"/>
+</map>
