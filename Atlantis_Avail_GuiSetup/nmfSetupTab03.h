@@ -362,6 +362,11 @@ public Q_SLOTS:
      */
     void callback_FilenameReturnPressed();
     /**
+     * @brief Callback invoked when use tries to change the Fished checkbox by clicking on it. This isn't
+     * allowed since the checkbox is read-only.
+     */
+    void callback_FishedMouseClick();
+    /**
      * @brief Callback invoked when user presses the Load button and the appropriate table is loaded
      */
     void callback_LoadPB();
@@ -394,6 +399,11 @@ public Q_SLOTS:
      * @param column : column number of section clicked
      */
     void callback_PredatorHorizontalSectionClicked(int column);
+    /**
+     * @brief Callback invoked when use tries to change the Predator checkbox by clicking on it. This isn't
+     * allowed since the checkbox is read-only.
+     */
+    void callback_PredatorMouseClick();
     /**
      * @brief Callback invoked whenever a cell in the Predator table is clicked
      * @param index : QModelIndex index of the cell clicked
@@ -456,6 +466,8 @@ public Q_SLOTS:
      * @brief Callback invoked when the user presses the Chart View button. A chart of Diet Composition values is drawn.
      */
     void callback_ViewPB();
+
+
 };
 
 #endif

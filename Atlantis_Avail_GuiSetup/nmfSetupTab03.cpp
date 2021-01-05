@@ -80,8 +80,9 @@ nmfSetup_Tab3::nmfSetup_Tab3(QTabWidget*  tabs,
     Setup_Tab3_EqualizeCB         = Setup_Tabs->findChild<QCheckBox      *>("Setup_Tab3_EqualizeCB");
     Setup_Tab3_EqualizePB         = Setup_Tabs->findChild<QPushButton    *>("Setup_Tab3_EqualizePB");
 
-    setCheckBoxReadOnly(Setup_Tab3_FishedCB,true);
-    setCheckBoxReadOnly(Setup_Tab3_PredatorCB,true);
+    // setCheckBoxReadOnly(Setup_Tab3_FishedCB,true);
+    // setCheckBoxReadOnly(Setup_Tab3_PredatorCB,true);
+
     enableDietCompositionTab(false);
 
     Setup_Tab3_PrevPB->setText("\u25C1--");
@@ -138,10 +139,34 @@ nmfSetup_Tab3::setupConnections()
             this,                          SLOT(callback_EqualizeCB(int)));
     connect(Setup_Tab3_EqualizePB,         SIGNAL(clicked()),
             this,                          SLOT(callback_EqualizePB()));
+    connect(Setup_Tab3_FishedCB,           SIGNAL(clicked()),
+            this,                          SLOT(callback_FishedMouseClick()));
+    connect(Setup_Tab3_PredatorCB,         SIGNAL(clicked()),
+            this,                          SLOT(callback_PredatorMouseClick()));
 
     setupPredatorTableConnections();
     setupPreyOnlyTableConnections();
     setupDietCompositionTableConnections();
+}
+
+void
+nmfSetup_Tab3::callback_PredatorMouseClick()
+{
+    int currentState = Setup_Tab3_PredatorCB->checkState();
+
+    Setup_Tab3_PredatorCB->blockSignals(true);
+    Setup_Tab3_PredatorCB->setChecked(currentState != Qt::Checked);
+    Setup_Tab3_PredatorCB->blockSignals(false);
+}
+
+void
+nmfSetup_Tab3::callback_FishedMouseClick()
+{
+    int currentState = Setup_Tab3_FishedCB->checkState();
+
+    Setup_Tab3_FishedCB->blockSignals(true);
+    Setup_Tab3_FishedCB->setChecked(currentState != Qt::Checked);
+    Setup_Tab3_FishedCB->blockSignals(false);
 }
 
 void
@@ -711,16 +736,20 @@ nmfSetup_Tab3::setupHelp()
                                          "<li>Adult Only</li>"\
                                          "<li>All Ages</li>"
                                       << "<strong><center>Functional Response</center></strong>"\
-                                         "<p>Currently there are 4 Functional Response equations implemented.<br><br>They are:</p>"\
+                                         "<p>Currently there are 7 Functional Response equations implemented.<br><br>They are:</p>"\
                                          "<p><ol>"\
-                                         "<li>  Type I</li>"\
+                                         "<li>Standard Holling Type I</li>"\
                                          "<br>D(pi) = B(p)C(p)a(pi)B(i) / ∑B(prey)<br>"\
                                          "<li>Standard Holling Type II</li>"\
                                          "<br>D(pi) = B(p)C(p)a(pi)B(i) / [1 + (C(p)E(p)/g(p)) x ∑B(prey)]<br>"\
-                                         "<li>Modified Holling Type II</li>"\
-                                         "<br>D(pi) = B(p)C(p)a(pi)B(i) / [1 + (C(p)E(p)/g(p)) x ∑(a(prey)B(prey))]<br>"\
+                                         "<li>Standard Holling Type II½</li>"\
+                                         "<br>D(pi) = B(p)C(p)aⁿ(pi)Bⁿ(i) / [1 + (C(p)E(p)/g(p)) x ∑Bⁿ(prey)] where 1.0 &lt; n &lt; 2.0<br>"\
                                          "<li>Standard Holling Type III</li>"\
                                          "<br>D(pi) = B(p)C(p)a²(pi)B²(i) / [1 + (C(p)E(p)/g(p)) x ∑B²(prey)]<br>"\
+                                         "<li>Modified Holling Type II</li>"\
+                                         "<br>D(pi) = B(p)C(p)a(pi)B(i) / [1 + (C(p)E(p)/g(p)) x ∑(a(prey)B(prey))]<br>"\
+                                         "<li>Modified Holling Type II½</li>"\
+                                         "<br>D(pi) = B(p)C(p)aⁿ(pi)Bⁿ(i) / [1 + (C(p)E(p)/g(p)) x ∑(aⁿ(prey)Bⁿ(prey))] where 1.0 &lt; n &lt; 2.0<br>"\
                                          "<li>Modified Holling Type III</li>"\
                                          "<br>D(pi) = B(p)C(p)a²(pi)B²(i) / [1 + (C(p)E(p)/g(p)) x ∑(a²(prey)B²(prey))]<br>"\
                                          "</ol>where</p><br>"\
@@ -1893,13 +1922,16 @@ nmfSetup_Tab3::setDesc(const QString& desc)
 void
 nmfSetup_Tab3::setFished(const bool& isFished)
 {
+//    Setup_Tab3_FishedCB->blockSignals(false);
     Setup_Tab3_FishedCB->setChecked(isFished);
 }
 
 void
 nmfSetup_Tab3::setPredator(const bool& isPredator)
 {
+//    Setup_Tab3_PredatorCB->setCheckable(true);
     Setup_Tab3_PredatorCB->setChecked(isPredator);
+//    Setup_Tab3_PredatorCB->setCheckable(false);
 }
 
 void

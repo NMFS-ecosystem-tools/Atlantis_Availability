@@ -787,7 +787,7 @@
                <string>Checked if the biological item is fished.</string>
               </property>
               <property name="toolTipDuration">
-               <number>2</number>
+               <number>-1</number>
               </property>
               <property name="statusTip">
                <string>Checked if the biological item is fished.</string>
@@ -812,7 +812,7 @@
                <string>Checked if the species is a Predator species</string>
               </property>
               <property name="toolTipDuration">
-               <number>2</number>
+               <number>-1</number>
               </property>
               <property name="statusTip">
                <string>Checked if the species is a Predator species</string>
