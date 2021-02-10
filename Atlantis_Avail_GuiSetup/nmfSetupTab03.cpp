@@ -1572,7 +1572,6 @@ nmfSetup_Tab3::loadDietCompositionData()
     // Clear table
     m_smodelDietComposition = new QStandardItemModel(0, allSpecies.size());
     m_smodelDietComposition->setHorizontalHeaderLabels(allSpecies);
-    Setup_Tab3_DietCompositionTV->setModel(m_smodelDietComposition);
 
     if (file.open(QIODevice::ReadOnly|QIODevice::Text)) {
         QTextStream stream(&file);
@@ -1587,6 +1586,7 @@ nmfSetup_Tab3::loadDietCompositionData()
         file.close();
         m_smodelDietComposition = new QStandardItemModel(numRows,numCols);
     }
+    Setup_Tab3_DietCompositionTV->setModel(m_smodelDietComposition);
 
     if (file.open(QIODevice::ReadOnly|QIODevice::Text)) {
         m_smodelDietComposition->setHorizontalHeaderLabels(headerLine.split(","));
@@ -1697,7 +1697,7 @@ nmfSetup_Tab3::callback_SavePB()
         if ((m_smodelPredator != nullptr) && (m_smodelPredator->rowCount() > 0)) {
             if (passedPredatorDataChecks()) {
                 savePredatorData();
-                removeDietCompositionTable();
+//              removeDietCompositionTable();
                 thereIsPredatorData = true;
             } else {
                 Setup_Tabs->setCursor(Qt::ArrowCursor);
@@ -2027,7 +2027,7 @@ nmfSetup_Tab3::callback_EqualizePB()
     int numRows;
     int numCols;
     int numSelectedCellsInRow;
-    double value;
+    double value=0;
     double diff;
     double totalRow;
     double amountToEqualize;
@@ -2176,7 +2176,7 @@ nmfSetup_Tab3::callback_SpeciesTabWChanged(int tab)
     if (selectedDietCompositionTab) {
         Setup_Tab3_NextPB->setEnabled(m_loadedDietComposition ||
                                       m_savedDietComposition);
-        Setup_Tab3_LoadPB->setEnabled(m_savedDietComposition);
+//      Setup_Tab3_LoadPB->setEnabled(m_savedDietComposition);
     } else {
         Setup_Tab3_NextPB->setEnabled(m_loadedSpecies ||
                                       m_savedSpecies);
