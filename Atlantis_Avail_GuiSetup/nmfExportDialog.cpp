@@ -81,7 +81,7 @@ nmfExportDialog::readPrmFile(const QString& filename)
             if (line.contains(nmfConstantsAvailability::BeginSection_pPrey)) {
                 line = "<a name=\"pPrey\" style=\"text-decoration:none;color:inherit;\" href=\"#"+line+"\">" + line + "</a>";
                 m_startCharNumber = charNumber;
-            } else if (line.contains(nmfConstantsAvailability::BeginSection_pPrey)) {
+            } else if (line.contains(nmfConstantsAvailability::EndSection_pPrey)) {
                 m_endCharNumber = charNumber - (line.size()+1);
             }
             retv += line + "<br>";
