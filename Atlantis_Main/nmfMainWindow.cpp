@@ -659,7 +659,7 @@ void
 nmfMainWindow::menu_about()
 {
     QString name    = "Tool for calculating predator food availability.";
-    QString version = "Availability Tool v0.9.0 (beta)";
+    QString version = "Availability Tool v0.9.1 (beta)";
     QString specialAcknowledgement = "";
     QString cppVersion   = "C++??";
     QString boostVersion = "?";
